@@ -1,6 +1,6 @@
 # Physics of the teeterboard
 
-Why the falling-weight event exceeds COP 1.15. **Local edition; not published.**
+Why the falling-weight event exceeds COP 1.15.
 
 ## What this article adds, and why it matters
 
@@ -42,9 +42,8 @@ no sibling repository, private research file or network access is required.
 `make -B pdf` forces a rebuild. Figure data are embedded in local TeX inputs.
 
 The title date is pinned in `ARTICLE_DATE` and in each edition's metadata.
-The first-page PDF creation time advances on rebuild. The GitHub address is a
-planned destination; this delivery is committed only locally. Intermediates go
-to ignored `build/`; `BUILD_DIR=/absolute/path` selects another directory.
+The first-page PDF creation time advances on rebuild. Intermediates go to
+ignored `build/`; `BUILD_DIR=/absolute/path` selects another directory.
 `make clean` removes that build directory and preserves the article PDFs.
 
 The shared article-tools theme is installed as independent build inputs in

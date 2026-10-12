@@ -1,7 +1,6 @@
 # Teeterbrädans fysik
 
 Varför fallvikternas händelse ger COP över 1.15.
-**Lokal utgåva; inte publicerad.**
 
 Hur överför två fallvikter arbete genom en teeterbräda? Denna artikel på sex
 sidor utvecklar förloppet i del 1 av

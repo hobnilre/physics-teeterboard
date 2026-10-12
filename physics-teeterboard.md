@@ -20,7 +20,7 @@ keywords:
 
 \begingroup\scriptsize
 \noindent PDF created: \pdfbuildtimestamp\par
-\noindent Latest on GitHub: \url{https://github.com/hobnilre/physics-teeterboard} (planned; local edition)\par
+\noindent Latest on GitHub: \url{https://github.com/hobnilre/physics-teeterboard}\par
 \endgroup
 
 # The question: event COP above 1.15

@@ -21,7 +21,7 @@ keywords:
 
 \begingroup\scriptsize
 \noindent PDF created: \pdfbuildtimestamp\par
-\noindent Latest on GitHub: \url{https://github.com/hobnilre/physics-teeterboard} (planerad; lokal utgåva)\par
+\noindent Latest on GitHub: \url{https://github.com/hobnilre/physics-teeterboard}\par
 \noindent Svensk utgåva av \href{../physics-teeterboard.pdf}{Physics of the teeterboard}.\par
 \endgroup
 
