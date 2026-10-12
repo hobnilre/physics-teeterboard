@@ -1,0 +1,18 @@
+\documentclass[border=4pt]{standalone}
+\input{../../figures/figure-style}
+\pgfplotsset{every axis/.append style={font=\small,grid=major,
+ grid style={gray!18},axis line style={frameline},tick label style={font=\small},
+ xlabel near ticks,ylabel near ticks,legend cell align=left,legend style={font=\small,draw=none,fill=white},
+ no markers,line width=1.05pt}}
+\input{../../figures/event-data}
+
+\begin{document}
+\begin{tikzpicture}\begin{axis}[width=14.6cm,height=4.3cm,
+ xmin=0,xmax=1.5,ymin=-2,ymax=8,xlabel={Tid (s)},ylabel={Energi / arbete (J)},
+ legend columns=4,legend style={at={(.5,1.08)},anchor=south},xtick={0,.25,.5,.75,1,1.25,1.5}]
+\addplot[elemC] table[x=t,y=WR]{\eventdata};\addlegendentry{$W_R$}
+\addplot[elemB] table[x=t,y=U]{\eventdata};\addlegendentry{$U$}
+\addplot[frameline,dotted] table[x=t,y=Q]{\eventdata};\addlegendentry{$Q_b$}
+\addplot[frameline,dashed,domain=0:1.5] {5.886};\addlegendentry{$U(0)$}
+\end{axis}\end{tikzpicture}
+\end{document}

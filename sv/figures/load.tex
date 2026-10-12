@@ -1,0 +1,24 @@
+\documentclass[border=4pt]{standalone}
+\input{../../figures/figure-style}
+\pgfplotsset{every axis/.append style={font=\small,grid=major,
+ grid style={gray!18},axis line style={frameline},tick label style={font=\small},
+ xlabel near ticks,ylabel near ticks,legend cell align=left,legend style={font=\small,draw=none,fill=white},
+ no markers,line width=1.05pt}}
+\input{../../figures/load-data}
+
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[width=7.2cm,height=4.2cm,xmin=.2,xmax=.8,ymin=0,ymax=7.5,
+ xlabel={Tid (s)},ylabel={$W_R$ (J)},legend columns=3,
+ legend style={at={(1.05,1.1)},anchor=south},xtick={.2,.4,.6,.8}]
+\addplot[elemC,dashed] table[x=t,y=W16]{\loaddata};\addlegendentry{$b=16$}
+\addplot[elemC] table[x=t,y=W32]{\loaddata};\addlegendentry{$b=32$}
+\addplot[elemC,densely dotted] table[x=t,y=W64]{\loaddata};\addlegendentry{$b=64$}
+\end{axis}
+\begin{axis}[at={(7.5cm,0)},anchor=south west,width=7.2cm,height=4.2cm,
+ xmin=.2,xmax=.8,ymin=-25,ymax=70,xlabel={Tid (s)},ylabel={$F_R$ (N)},xtick={.2,.4,.6,.8}]
+\addplot[elemC,dashed] table[x=t,y=F16]{\loaddata};
+\addplot[elemC] table[x=t,y=F32]{\loaddata};
+\addplot[elemC,densely dotted] table[x=t,y=F64]{\loaddata};
+\end{axis}\end{tikzpicture}
+\end{document}
