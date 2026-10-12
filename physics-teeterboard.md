@@ -1,15 +1,16 @@
 ---
 title: "Physics of the teeterboard"
-subtitle: "Contact, rotation and work in a loaded descent"
+subtitle: "Why the falling-weight event exceeds COP 1.15"
 author: "Hob Nilre & Bo C. Herlin"
 date: "2026-10-12"
 abstract: |
-  We derive the mechanism behind part 1 of Mad Scientist 1, from an illustrative
-  human teeterboard launch to its computed two-weight lever. Independent
-  integrations reproduce 6.994139 J of receiver work and event COP 1.188267.
-  Contact, rebound and renewed contact explain the transfer. The drivers'
-  further descent and final stores resolve the work account. Figures and
-  tables connect the force laws, motion and measurable signals.
+  The falling-weight event in part 1 of Mad Scientist 1 delivers 6.994139 J
+  to its receiver against a fixed starting-energy reference of 5.886 J:
+  event COP 1.188267, above 1.15. The weights continue below the reference
+  plane, releasing a further 2.244651 J. After remaining kinetic and elastic
+  stores and bearing heat, 1.108139 J reaches the receiver above the starting
+  reference. We follow the contact mechanism and derive the positive margin,
+  supported by computed traces, five calculated cases and a measurement budget.
 keywords:
   - teeterboard
   - unilateral contact
@@ -22,7 +23,7 @@ keywords:
 \noindent Latest on GitHub: \url{https://github.com/hobnilre/physics-teeterboard} (planned; local edition)\par
 \endgroup
 
-# From a launch to a work question
+# The question: event COP above 1.15
 
 Two people land on one side of a teeterboard and lift a third. The pivot
 redirects motion while legs and board deform. Part 1 of [Mad Scientist 1][companion]
@@ -40,9 +41,9 @@ K_{\rm out}=\tfrac12Mw^2=2240\,\mathrm J,
 \label{eq:launch}
 \end{equation}
 The difference is $490$ J. Two such masses descending another $0.50$ m
-release $2Mg(0.50\,\mathrm m)=686.7$ J. This illustrates the scale of gravity's
-contribution; the flyer's rise, remaining motion, deformation, losses and
-active work must also enter a complete launch account.
+release $2Mg(0.50\,\mathrm m)=686.7$ J. The flyer's rise, remaining motion, deformation, losses and active work
+also enter the launch account. Gravity keeps doing work after contact begins;
+the arrival energy alone does not describe everything available to the receiver.
 
 \newpage
 
@@ -88,7 +89,9 @@ I\ddot\phi=-a\cos\phi(f_1+f_2)-K_\phi\phi-c_b\dot\phi
 
 The springs push only while compressed. At separation $\delta_i=f_i=0$;
 the law introduces neither an impact impulse nor a discrete energy loss.
-Both contacts are purely elastic. Dissipation occurs in the receiver and bearing.
+Both contacts are purely elastic; the receiver and bearing dissipate energy.
+The weights can keep falling while they turn the board. The springs time that
+transfer, and the receiver takes work from the resulting motion.
 
 \newpage
 
@@ -132,12 +135,12 @@ ratio alone cannot predict the outgoing motion or work.
 
 A stationary ideal pivot supplies impulse $J_O=\int F_O\,dt$ but no work,
 since $P_O=F_Ov_O=0$. The performers' vertical momentum alone is not conserved.
-Outgoing speed does not identify the work source; the contact trajectory
-reveals the forces and displacements.
+The receiver collects work on the upward stroke and the return stroke.
+Their accumulated work is the output used in the event COP.
 
 \newpage
 
-# Deriving the work account
+# Following the extra descent into receiver work
 
 The mechanical boundary contains the drivers, board, contact and torsion
 springs, with gravity included as potential energy. The receiver and bearing
@@ -159,7 +162,7 @@ U(T)+W_R+Q_b=U(0),\quad
 The same identity holds across opening and closure because spring energy
 vanishes at zero compression. This balance follows from the force laws.
 
-![Computed cumulative receiver work and total mechanical storage. The latter includes signed gravitational potential. Their sum, plus bearing heat, stays at 5.886 J.](figures/energy.pdf){#fig:energy width=96%}
+![Computed cumulative receiver work and total mechanical storage. The latter includes signed gravitational potential. Their sum, plus bearing heat, stays at 5.886 J. Receiver work crosses the marked threshold of 1.15 times the starting energy.](figures/energy.pdf){#fig:energy width=96%}
 
 \FloatBarrier
 
@@ -177,34 +180,44 @@ vanishes at zero compression. This balance follows from the force laws.
 The extra $2.244651$ J of gravitational descent below the ready plane pays
 for $1.108139$ J of output above the starting reference, $1.101914$ J of
 remaining kinetic and elastic energy, and $0.034598$ J of bearing heat.
-The mechanism has a resolved work account, including its negative final potential.
+The weights finish below the plane used to count their starting energy.
+That continued descent lets the receiver collect more than the starting reference.
 
 \newpage
 
-# What the ratio and the load change
+# Why the event COP exceeds 1.15
 
-There is no external actuator during this event. Its declared starting-energy
-denominator is $D=2mgH=5.886$ J. Retaining exactly that reference gives
+Keep the original zero-height plane and the fixed $1.5$ s event. There is no
+external actuator input. With starting energy $D=2mgH=5.886$ J, define
+$E_{\rm below}=-mg\sum_i y_i(T)$ and the remaining non-gravitational store
+$U_+=K(T)+U_\phi(T)+U_c(T)$. Here $K$, $U_\phi$ and $U_c$ are the kinetic,
+torsion and contact terms in \eqref{eq:store}. The work identity gives
 \begin{equation}
-C_{\rm event}=\frac{W_R}{D}=1.188267,\qquad
-\eta_g=\frac{W_R}{mg\sum_i[y_i(0)-y_i(T)]}=0.860219.
-\label{eq:ratios}
+C_{\rm event}=\frac{W_R}{D}
+=1+\frac{E_{\rm below}-U_+-Q_b}{D}=1.188267.
+\label{eq:cop}
 \end{equation}
-These answer different questions: output relative to the initial ready-plane
-reference, and the fraction of the actual $8.130651$ J gravitational decrease
-delivered to the receiver. A shifted datum $y'=y-h$ changes $D$ to
-$D'=D-2mgh$ and $U(T)$ by the same constant. Work and $\eta_g$ stay unchanged;
-$W_R/D'$ depends on the reference and requires $D'>0$.
+Gravity is already inside the stored-energy account. The extra descent appears
+as negative final potential, while $D$ stays at its declared reference. Thus
+\begin{equation}
+C_{\rm event}>1.15\quad\Longleftrightarrow\quad
+E_{\rm below}>0.15D+U_++Q_b.
+\label{eq:threshold}
+\end{equation}
+The left side is $2.244651$ J and the required right side is $2.019413$ J.
+The resulting margin is $0.225239$ J. Each weight ends $0.414406$ m below its release height;
+the starting reference counts $0.30$ m. The actual gravitational release is
+$8.130651$ J. This is how the stated event ratio clears 1.15.
 
-| $k$ (N/m) | $b$ (N s/m) | Receiver work (J) | Event COP |
-| ---: | ---: | ---: | ---: |
-| 500 | 32 | 6.994139 | 1.188267 |
-| 450 | 30 | 7.013120 | 1.191492 |
-| 450 | 34 | 7.017282 | 1.192199 |
-| 550 | 30 | 6.974505 | 1.184931 |
-| 550 | 34 | 6.978687 | 1.185642 |
+| $k$ (N/m) | $b$ (N s/m) | Receiver work (J) | Event COP | Margin (J) |
+| ---: | ---: | ---: | ---: | ---: |
+| 500 | 32 | 6.994139 | 1.188267 | 0.225239 |
+| 450 | 30 | 7.013120 | 1.191492 | 0.244220 |
+| 450 | 34 | 7.017282 | 1.192199 | 0.248382 |
+| 550 | 30 | 6.974505 | 1.184931 | 0.205605 |
+| 550 | 34 | 6.978687 | 1.185642 | 0.209787 |
 
-: Reproduction of the reference case and all four confirmation cases in the companion study; the event and height reference are fixed.
+: Reference and four confirmation cases, with fixed event and height reference. Margin means $W_R-1.15D$; all five cases clear the threshold.
 
 ![Computed load controls at $k=500$ N/m. Higher resistance changes the force pulse and delays work transfer; a larger force need not yield more work by 1.5 s.](figures/load.pdf){#fig:load width=98%}
 
@@ -212,21 +225,19 @@ $W_R/D'$ depends on the reference and requires $D'>0$.
 
 At $b=16,32,64$ N s/m the work is respectively $6.959211$, $6.994139$ and
 $6.977427$ J. For $b=0$, receiver work is zero and substantial motion remains.
-With a stationary loaded equilibrium, $f_i=mg$ gives
-$K_\phi\phi_*=-2amg\cos\phi_*$ and $y_*=a\sin\phi_*-mg/k$.
-The reference values are $\phi_*=0.192573$ rad and $y_*=-0.115313$ m,
-close to, but distinct from, the finite-time endpoint.
+
+The extra fall covers the energy still in the mechanism and the bearing heat,
+then leaves enough receiver work to exceed the 15 percent target in all five tabulated cases.
+
+\newpage
+
+# Making the margin measurable
 
 We integrated the symmetric Newton equations independently with two numerical
 methods and timestep refinement: 21 runs covering all eight configurations.
 The largest receiver-work spread was $2.66\times10^{-7}$ J; maximum storage
 residual was $3.22\times10^{-7}$ J. Independent power quadrature differed by
-at most $1.05\times10^{-11}$ J. These estimate numerical sensitivity; they
-do not bound errors in a physical contact law.
-
-\newpage
-
-# Measurements and the next event
+at most $1.05\times10^{-11}$ J. These estimate numerical sensitivity, not physical-law error.
 
 A synchronized load cell and displacement encoder give signed receiver work,
 $W_R=\int F_R\,ds_R$, including the return stroke. Driver heights and board
@@ -247,34 +258,21 @@ That budget includes initial mass and height, force and displacement gains,
 offset, sampling, timing, bandwidth, loading and event-boundary allowances.
 With those simultaneous bounds the reference result remains above 1.15:
 \begin{equation}
-\frac{W_R-B_{\rm out}}{D+B_{\rm in}}=1.17118>1.15,
-\qquad W_R-1.15D=0.225239\,\mathrm J.
+\begin{split}
+\frac{W_R-B_{\rm out}}{D+B_{\rm in}}&=1.17118>1.15,\\
+(W_R-B_{\rm out})-1.15(D+B_{\rm in})&=0.125314\,\mathrm J>0.
+\end{split}
 \label{eq:measurement}
 \end{equation}
-Measuring the drivers' final height is equally decisive: the predicted mean
-is $0.114406$ m below the ready plane. It locates the energy omitted when the
-initial height reference is mistaken for the total descent.
+The assumed measurement errors consume part of the predicted margin, but leave
+$0.125314$ J above the target. A receiver-work trace can therefore resolve the
+above-threshold result if those instrument bounds are achieved.
 
-## Preparation and reset
-
-At $T$ the board is tilted and the contacts remain compressed. Another
-identical release needs a reset. The companion's separately prescribed
-preparation and reset calculation supplies the account below.
-
-| Interval | Gross supplied work (J) | Receiver work (J) |
-| :--- | ---: | ---: |
-| Preparation to the stated initial state | 5.886000 | 0 |
-| The 1.5 s event | 0 | 6.994139 |
-| Prescribed reset | 2.210180 | 1.062185 |
-| Full history | 8.096180 | 8.056324 |
-
-: Retained full-history calculation in the companion study. Total bearing heat is 0.039844 J and returned actuator work is 0.000012 J; initial and final stores are zero.
-
-The full-history ratio is $8.056324/8.096180=0.995077$: reset adds both input
-and output, with different endpoint states from \eqref{eq:ratios}. Human launches
-also involve leg activation, board bending and flyer takeoff. In this model,
-contact elasticity times the transfer, the lever redirects it, and the receiver
-extracts work from a descent extending below the starting reference.
+The drivers' final height completes the explanation: they end $0.114406$ m
+below the ready plane. Against the fixed $5.886$ J reference, the receiver gets
+$6.994139$ J because gravity continues releasing energy below that plane.
+The work trace establishes COP above 1.15; the extra descent and endpoint stores
+show exactly how it is possible.
 
 # Reference {-}
 

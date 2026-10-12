@@ -1,6 +1,6 @@
 # Physics of the teeterboard
 
-Contact, rotation and work in a loaded descent. **Local edition; not published.**
+Why the falling-weight event exceeds COP 1.15. **Local edition; not published.**
 
 ## What this article adds, and why it matters
 
@@ -8,17 +8,20 @@ How do two falling weights transfer work through a teeterboard? This six-page
 article develops the event in part 1 of
 [Mad Scientist 1](https://github.com/hobnilre/physics-mad-scientist-1), from its
 illustrative human launch to the geometry, unilateral contact, torque and
-receiver law of the computed lever. Five vector figures and six tables connect
+receiver law of the computed lever. Five vector figures and five tables connect
 the derivation to the actual contact history, endpoint stores and signal scales.
 
-Independent calculations reproduce 6.994139 J of receiver work and event COP
-1.188267 with the companion's fixed height reference. The weights finish below
-that reference: their further descent, remaining elastic energy and bearing
-heat explain the work account. Comparisons show how load and contact stiffness
-affect the result. A load cell, encoder and driver-height measurements can
-separate the transfers. The article also retains the distinct preparation and
-reset account; numerical predictions and assumed measurement bounds are clearly
-identified.
+The focus is **event COP > 1.15**. Independent calculations reproduce
+6.994139 J of receiver work against the fixed 5.886 J starting reference:
+COP 1.188267. The weights continue below the reference plane and release
+another 2.244651 J. After remaining stores and bearing heat, the result clears
+the 15 percent target by 0.225239 J. All five tabulated cases clear that target.
+
+A trail of plain-language conclusions follows the argument from continued
+fall, through contact and rotation, to the extra receiver work. The article
+derives the threshold condition and shows what to measure. With the stated
+prospective instrument bounds, a 0.125314 J margin remains; the numerical
+predictions and calibration assumptions are explicitly distinguished.
 
 <!-- article-tools:translations:start -->
 ## Translations

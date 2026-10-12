@@ -1,16 +1,17 @@
 ---
 title: "Teeterbrädans fysik"
-subtitle: "Kontakt, rotation och arbete under ett belastat fall"
+subtitle: "Varför fallvikternas händelse ger COP över 1.15"
 author: "Hob Nilre & Bo C. Herlin"
 date: "2026-10-12"
 lang: sv
 abstract: |
-  Vi härleder mekanismen bakom del 1 av Mad Scientist 1, från ett illustrativt
-  akrobathopp till den beräknade hävstången med två fallvikter. Oberoende
-  integrationer ger mottagararbetet 6.994139 J och händelsens COP 1.188267.
-  Kontakt, återstuds och förnyad kontakt förklarar överföringen. Vikternas
-  fortsatta fall och slutliga energilager sluter arbetskontot. Figurer och
-  tabeller knyter samman kraftlagar, rörelse och mätbara signaler.
+  Fallvikternas händelse i del 1 av Mad Scientist 1 ger mottagaren 6.994139 J
+  med den fasta startenergireferensen 5.886 J: händelsens COP blir 1.188267,
+  över 1.15. Vikterna fortsätter under referensplanet och frigör ytterligare
+  2.244651 J. Efter kvarvarande rörelse- och fjäderenergi samt lagervärme når
+  1.108139 J mottagaren utöver startreferensen. Vi följer kontaktmekanismen
+  och härleder den positiva marginalen, med stöd av beräknade förlopp, fem
+  bekräftade fall och en mätbudget.
 keywords:
   - teeterbräda
   - ensidig kontakt
@@ -24,7 +25,7 @@ keywords:
 \noindent Svensk utgåva av \href{../physics-teeterboard.pdf}{Physics of the teeterboard}.\par
 \endgroup
 
-# Från ett hopp till en fråga om arbete
+# Frågan: händelsens COP över 1.15
 
 Två personer landar på ena sidan av en teeterbräda och lyfter en tredje.
 Stödet ändrar rörelsens riktning medan ben och bräda deformeras. Del 1 av
@@ -43,9 +44,9 @@ K_{\rm out}=\tfrac12Mw^2=2240\,\mathrm J,
 \label{eq:launch}
 \end{equation}
 Skillnaden är $490$ J. Om de två massorna sjunker ytterligare $0.50$ m
-frigörs $2Mg(0.50\,\mathrm m)=686.7$ J. Det visar tyngdkraftens möjliga
-bidrag; den uppkastades höjning, kvarvarande rörelse, deformation, förluster
-och aktivt arbete måste också ingå i ett fullständigt energikonto för hoppet.
+frigörs $2Mg(0.50\,\mathrm m)=686.7$ J. Den uppkastades höjning, kvarvarande rörelse, deformation, förluster och
+aktivt arbete ingår också i hoppets energikonto. Tyngdkraften fortsätter utföra
+arbete efter kontakten; ankomstenergin beskriver inte allt som mottagaren kan få.
 
 \newpage
 
@@ -92,7 +93,9 @@ I\ddot\phi=-a\cos\phi(f_1+f_2)-K_\phi\phi-c_b\dot\phi
 
 Fjädrarna trycker bara när de är komprimerade. Vid kontaktförlust är
 $\delta_i=f_i=0$; lagen ger varken stötimpuls eller språngvis energiförlust.
-Båda kontakterna är rent elastiska. Energi avges till mottagaren och som lagervärme.
+Båda kontakterna är rent elastiska; mottagaren och lagret avleder energi.
+Vikterna kan fortsätta falla medan de vrider brädan. Fjädrarna styr överföringens
+tidsförlopp och mottagaren tar arbete ur rörelsen.
 
 \newpage
 
@@ -136,12 +139,12 @@ förutsäga utgående rörelse eller arbete.
 
 Ett stillastående idealt stöd ger impuls $J_O=\int F_O\,dt$ men inget arbete,
 eftersom $P_O=F_Ov_O=0$. Akrobaternas vertikala rörelsemängd bevaras inte ensam.
-Utgående hastighet avslöjar inte arbetets källa; kontaktförloppet visar
-krafterna och förflyttningarna.
+Mottagaren samlar arbete både på uppvägen och på tillbakavägen.
+Det sammanlagda arbetet är utbytet som används i händelsens COP.
 
 \newpage
 
-# Arbetsbalansen härledd
+# Följ det fortsatta fallet till mottagararbete
 
 Det mekaniska systemet omfattar vikter, bräda, kontaktfjädrar och vridfjäder,
 med tyngdkraften representerad som lägesenergi. Mottagaren och lagervärmen
@@ -164,7 +167,7 @@ U(T)+W_R+Q_b=U(0),\quad
 Identiteten gäller även när kontakten öppnas och sluts, eftersom fjäderenergin
 är noll vid noll kompression. Balansen följer av kraftlagarna.
 
-![Beräknat ackumulerat mottagararbete och total mekanisk energi. Den senare omfattar lägesenergi med tecken. Summan av dessa två och lagervärmen förblir 5.886 J.](figures/energy.pdf){#fig:energy width=96%}
+![Beräknat ackumulerat mottagararbete och total mekanisk energi. Den senare omfattar lägesenergi med tecken. Summan av dessa två och lagervärmen förblir 5.886 J. Mottagararbetet passerar den markerade gränsen på 1.15 gånger startenergin.](figures/energy.pdf){#fig:energy width=96%}
 
 \FloatBarrier
 
@@ -182,34 +185,44 @@ Identiteten gäller även när kontakten öppnas och sluts, eftersom fjäderener
 De ytterligare $2.244651$ J som frigörs under startplanet räcker till
 $1.108139$ J utgående arbete utöver startreferensen, $1.101914$ J kvarvarande
 rörelse- och fjäderenergi samt $0.034598$ J lagervärme. Mekanismens arbetskonto
-sluter, med den negativa slutliga lägesenergin medräknad.
+sluter. Vikterna slutar under planet som används för att räkna startenergin.
+Det fortsatta fallet gör att mottagaren får mer än startreferensen.
 
 \newpage
 
-# Vad kvoten och lasten ändrar
+# Varför händelsens COP överstiger 1.15
 
-Ingen yttre aktuator driver denna händelse. Dess definierade nämnare för
-startenergin är $D=2mgH=5.886$ J. Med exakt samma referens fås
+Behåll den ursprungliga nollnivån och händelsens fasta $1.5$ s. Ingen yttre
+aktuator tillför arbete. Med startenergin $D=2mgH=5.886$ J definieras
+$E_{\rm below}=-mg\sum_i y_i(T)$ och kvarvarande energi utöver lägesenergin,
+$U_+=K(T)+U_\phi(T)+U_c(T)$. Här är $K$, $U_\phi$ och $U_c$ rörelse-,
+vridfjäder- och kontakttermerna i \eqref{eq:store}. Arbetsbalansen ger
 \begin{equation}
-C_{\rm event}=\frac{W_R}{D}=1.188267,\qquad
-\eta_g=\frac{W_R}{mg\sum_i[y_i(0)-y_i(T)]}=0.860219.
-\label{eq:ratios}
+C_{\rm event}=\frac{W_R}{D}
+=1+\frac{E_{\rm below}-U_+-Q_b}{D}=1.188267.
+\label{eq:cop}
 \end{equation}
-Kvoterna besvarar olika frågor: utgående arbete relativt startplanets
-energireferens, respektive den andel av den faktiska minskningen i lägesenergi,
-$8.130651$ J, som når mottagaren. En flyttad nollnivå $y'=y-h$ ändrar $D$
-till $D'=D-2mgh$ och $U(T)$ med samma konstant. Arbetet och $\eta_g$
-ändras inte; $W_R/D'$ beror på referensen och kräver $D'>0$.
+Tyngdkraften ingår redan i energikontot. Det fortsatta fallet ger negativ
+slutlig lägesenergi, medan $D$ behåller sin definierade referens. Därför gäller
+\begin{equation}
+C_{\rm event}>1.15\quad\Longleftrightarrow\quad
+E_{\rm below}>0.15D+U_++Q_b.
+\label{eq:threshold}
+\end{equation}
+Vänsterledet är $2.244651$ J och det erforderliga högerledet $2.019413$ J.
+Marginalen blir $0.225239$ J. Varje vikt slutar $0.414406$ m under sin frigöringshöjd;
+startreferensen räknar $0.30$ m. Den faktiska frigjorda lägesenergin är
+$8.130651$ J. Så kan händelsens angivna kvot överstiga 1.15.
 
-| $k$ (N/m) | $b$ (N s/m) | Mottagararbete (J) | Händelsens COP |
-| ---: | ---: | ---: | ---: |
-| 500 | 32 | 6.994139 | 1.188267 |
-| 450 | 30 | 7.013120 | 1.191492 |
-| 450 | 34 | 7.017282 | 1.192199 |
-| 550 | 30 | 6.974505 | 1.184931 |
-| 550 | 34 | 6.978687 | 1.185642 |
+| $k$ (N/m) | $b$ (N s/m) | Mottagararbete (J) | Händelsens COP | Marginal (J) |
+| ---: | ---: | ---: | ---: | ---: |
+| 500 | 32 | 6.994139 | 1.188267 | 0.225239 |
+| 450 | 30 | 7.013120 | 1.191492 | 0.244220 |
+| 450 | 34 | 7.017282 | 1.192199 | 0.248382 |
+| 550 | 30 | 6.974505 | 1.184931 | 0.205605 |
+| 550 | 34 | 6.978687 | 1.185642 | 0.209787 |
 
-: Återberäkning av referensfallet och samtliga fyra bekräftelsefall i följeartikeln; händelsen och höjdreferensen hålls fasta.
+: Referensfall och fyra bekräftelsefall med fast händelse och höjdreferens. Marginalen är $W_R-1.15D$; alla fem fall klarar gränsen.
 
 ![Beräknade lastjämförelser vid $k=500$ N/m. Högre motstånd ändrar kraftpulsen och fördröjer arbetsöverföringen; större kraft behöver inte ge mer arbete fram till 1.5 s.](figures/load.pdf){#fig:load width=98%}
 
@@ -217,21 +230,19 @@ till $D'=D-2mgh$ och $U(T)$ med samma konstant. Arbetet och $\eta_g$
 
 Vid $b=16,32,64$ N s/m blir arbetet $6.959211$, $6.994139$ respektive
 $6.977427$ J. Vid $b=0$ är mottagararbetet noll och betydande rörelse återstår.
-I belastad statisk jämvikt ger $f_i=mg$ att
-$K_\phi\phi_*=-2amg\cos\phi_*$ och $y_*=a\sin\phi_*-mg/k$.
-Referensvärdena är $\phi_*=0.192573$ rad och $y_*=-0.115313$ m,
-nära men skilda från tillståndet vid den ändliga sluttiden.
+
+Det fortsatta fallet täcker energin som finns kvar i mekanismen och lagervärmen.
+Därefter återstår nog med mottagararbete för att slå målet på 15 procent i alla fem fall.
+
+\newpage
+
+# Gör marginalen mätbar
 
 Vi integrerade de symmetriska Newton-ekvationerna oberoende med två numeriska
 metoder och förfinade tidssteg: 21 körningar för alla åtta konfigurationer.
 Största spridningen i mottagararbete var $2.66\times10^{-7}$ J; största
 energibalansrest var $3.22\times10^{-7}$ J. Oberoende effektkvadratur avvek
-som mest $1.05\times10^{-11}$ J. Detta uppskattar numerisk känslighet, men
-ger inga felgränser för en fysisk kontaktlag.
-
-\newpage
-
-# Mätningar och nästa händelse
+som mest $1.05\times10^{-11}$ J. Detta uppskattar numerisk känslighet, inte kontaktlagens fysiska fel.
 
 En synkroniserad lastcell och lägesgivare ger mottagararbetet med tecken,
 $W_R=\int F_R\,ds_R$, inklusive returrörelsen. Vikternas höjder och brädans
@@ -252,34 +263,21 @@ Budgeten omfattar startmassa och starthöjd, kraft- och lägesskalor,
 nollpunktsfel, sampling, tidsfel, bandbredd, instrumentbelastning och
 händelsegränser. Med dessa samtidiga gränser ligger referensresultatet över 1.15:
 \begin{equation}
-\frac{W_R-B_{\rm out}}{D+B_{\rm in}}=1.17118>1.15,
-\qquad W_R-1.15D=0.225239\,\mathrm J.
+\begin{split}
+\frac{W_R-B_{\rm out}}{D+B_{\rm in}}&=1.17118>1.15,\\
+(W_R-B_{\rm out})-1.15(D+B_{\rm in})&=0.125314\,\mathrm J>0.
+\end{split}
 \label{eq:measurement}
 \end{equation}
-Vikternas sluthöjd är lika avgörande att mäta: det förutsagda medelvärdet
-ligger $0.114406$ m under startplanet. Där syns energin som utelämnas om
-starthöjdens referens förväxlas med hela fallet.
+De antagna mätfelen tar en del av den förutsagda marginalen, men lämnar
+$0.125314$ J över målet. Ett arbetsförlopp vid mottagaren kan alltså upplösa
+resultatet över gränsen om instrumentkraven uppnås.
 
-## Förberedelse och återställning
-
-Vid $T$ lutar brädan och kontakterna är komprimerade. En ny identisk
-frigöring kräver återställning. Följeartikelns separat föreskrivna beräkning
-av förberedelse och återställning ger kontot nedan.
-
-| Intervall | Tillfört bruttoarbete (J) | Mottagararbete (J) |
-| :--- | ---: | ---: |
-| Förberedelse till angivet starttillstånd | 5.886000 | 0 |
-| Händelsen på 1.5 s | 0 | 6.994139 |
-| Föreskriven återställning | 2.210180 | 1.062185 |
-| Hela förloppet | 8.096180 | 8.056324 |
-
-: Bevarad beräkning av hela förloppet i följeartikeln. Total lagervärme är 0.039844 J och återfört aktuatorarbete 0.000012 J; start- och slutenergi är noll.
-
-Kvoten för hela förloppet är $8.056324/8.096180=0.995077$: återställningen
-tillför både ingående och utgående arbete, med andra ändpunktstillstånd än
-i \eqref{eq:ratios}. Akrobathopp omfattar även benaktivering, brädböjning och
-upphopp. I modellen styr kontaktelasticiteten överföringens timing, hävstången
-ändrar riktningen och mottagaren tar arbete ur ett fall under startreferensen.
+Vikternas sluthöjd fullbordar förklaringen: de slutar $0.114406$ m under
+startplanet. Mot den fasta referensen $5.886$ J får mottagaren $6.994139$ J
+eftersom tyngdkraften fortsätter frigöra energi under detta plan. Arbetsförloppet
+fastställer COP över 1.15; det fortsatta fallet och energilagren vid slutet
+visar exakt hur det är möjligt.
 
 # Referens {-}
 
